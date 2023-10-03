@@ -12,6 +12,7 @@ class LoginPage extends StatelessWidget {
       body: Column(
         children: [
           AppBar(
+            backgroundColor:const Color(0xFFFFFFFF),
             title: const Text(
               "Online Instituto Médico UPB",
               style: TextStyle(fontSize: 32, color: Color(0xFFB4BEC9)),
