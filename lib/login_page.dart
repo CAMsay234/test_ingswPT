@@ -59,12 +59,16 @@ class LoginPage extends StatelessWidget {
                     style: TextStyle(fontSize: 60, color: Color(0xFF002333)),
                   ),
                   const SizedBox(height: 10),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      labelText: "ID",
-                      labelStyle: TextStyle(color: Color(0xFF002333)),
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF002333)),
+                  SizedBox(
+                    width: 300,
+                    child: TextFormField(
+                      decoration: const InputDecoration(
+                        labelText: "ID",
+                        
+                        labelStyle: TextStyle(color: Color(0xFF002333)),
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Color(0xFF002333)),
+                        ),
                       ),
                     ),
                   ),

@@ -6,7 +6,7 @@ class RegistroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-
+      backgroundColor: Color.fromARGB(0, 255, 255, 255),
     );
   }
 }
