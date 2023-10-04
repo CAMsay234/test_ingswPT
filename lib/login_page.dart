@@ -12,34 +12,52 @@ class LoginPage extends StatelessWidget {
       body: Column(
         children: [
           AppBar(
-            backgroundColor:const Color(0xFFFFFFFF),
-            title: const Text(
-              "Online Instituto Médico UPB",
-              style: TextStyle(fontSize: 32, color: Color(0xFFB4BEC9)),
+            backgroundColor: const Color(0xFFFFFFFF),
+            title: Row(
+              children: [
+                Image.asset(
+                  'assets/logo_corazon.png',
+                  width: 40,
+                  height: 40,
+                ),
+                const SizedBox(width: 8),
+                const Text(
+                  "Online Instituto Médico UPB",
+                  style: TextStyle(fontSize: 32, color: Color(0xFFB4BEC9)),
+                ),
+              ],
             ),
           ),
           Container(
             color: const Color(0xFFFFFFFF),
-            height: 2,
+            height: 5,
           ),
           Container(
+            height: 250,
             color: const Color(0xff159A9C),
-            child: const Text(
-              "Predictor de Tumores",
-              style: TextStyle(fontSize: 96, color: Color(0xFF002333)),
+            child: Row( // Usar un Row para alinear la imagen a la derecha y el texto a la izquierda
+              mainAxisAlignment: MainAxisAlignment.spaceAround, // Alinear elementos a los extremos
+              children: [
+                const Text(
+                  "Predictor de Tumores",
+                  style: TextStyle(fontSize: 96, color: Color(0xFF002333)),
+                ),
+                Image.asset('assets/logo_tumor.png'), // Imagen a la derecha
+              ],
             ),
           ),
           Expanded(
             child: Container(
               padding: const EdgeInsets.all(16),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Añadir espacio entre los elementos
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  const SizedBox(height: 10), // Mover "Bienvenido" más abajo
                   const Text(
                     "Bienvenido",
-                    style: TextStyle(fontSize: 40, color: Color(0xFF002333)),
+                    style: TextStyle(fontSize: 60, color: Color(0xFF002333)),
                   ),
-                  const SizedBox(height: 32), // Aumentar el espacio entre los elementos
+                  const SizedBox(height: 10),
                   TextFormField(
                     decoration: const InputDecoration(
                       labelText: "ID",
@@ -49,7 +67,7 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 30), // Mover el campo "ID" más abajo
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -57,21 +75,23 @@ class LoginPage extends StatelessWidget {
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF6EEAB0),
+                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50), // Ajustar el tamaño del botón
                         ),
                         child: const Text(
                           "Ingresar",
-                          style: TextStyle(color: Color(0xFF002333)),
+                          style: TextStyle(fontSize: 20, color: Color(0xFF002333)), // Ajustar el tamaño del texto del botón
                         ),
                       ),
-                      const SizedBox(width: 16),
+                      const SizedBox(width: 20),
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF6EEAB0),
+                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40), // Ajustar el tamaño del botón
                         ),
                         child: const Text(
                           "Registrarse",
-                          style: TextStyle(color: Color(0xFF002333)),
+                          style: TextStyle(fontSize: 20, color: Color(0xFF002333)), // Ajustar el tamaño del texto del botón
                         ),
                       ),
                     ],
@@ -85,3 +105,9 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
