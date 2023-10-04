@@ -1,5 +1,6 @@
 
-
+import 'package:flutter_application_1/menu_doctor_page.dart';
+import 'package:flutter_application_1/registro_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -72,26 +73,37 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const MenuDoctorPage(),
+                            ),
+                          );},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF6EEAB0),
-                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50), // Ajustar el tamaño del botón
+                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
                         ),
                         child: const Text(
                           "Ingresar",
-                          style: TextStyle(fontSize: 20, color: Color(0xFF002333)), // Ajustar el tamaño del texto del botón
+                          style: TextStyle(fontSize: 20, color: Color(0xFF002333)),
                         ),
                       ),
                       const SizedBox(width: 20),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          // Navegar a la página de registro cuando se presiona "Registrar"
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const RegistroPage(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF6EEAB0),
-                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40), // Ajustar el tamaño del botón
+                          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                         ),
                         child: const Text(
                           "Registrarse",
-                          style: TextStyle(fontSize: 20, color: Color(0xFF002333)), // Ajustar el tamaño del texto del botón
+                          style: TextStyle(fontSize: 20, color: Color(0xFF002333)),
                         ),
                       ),
                     ],
