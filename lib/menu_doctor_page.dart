@@ -88,8 +88,7 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
                 color: const Color(0xff159A9C), // Color de fondo del lado derecho
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                         Row(
                           children: [
@@ -108,6 +107,7 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
                           ],
                         ),
                         Row(
+                          
                           children: [
                             const Text(
                               "Nombre: ",
@@ -124,6 +124,7 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
                           ],
                         ),
                         Row(
+                          
                           children: [
                             const Text(
                               "Residencia: ",
@@ -140,6 +141,7 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
                           ],
                         ),
                         Row(
+                          
                           children: [
                             const Text(
                               "Especialidad: ",
@@ -162,8 +164,70 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
               ],
             ),
           ),
+            const  SizedBox(height: 125), // Espacio entre el contenido anterior y los botones
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              ElevatedButton(
+              onPressed: () {
+                // Acción cuando se presiona "Registrar Paciente"
+              },
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF6EEAB0), // Fondo verde fosforescente
+                  padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 60),// Tamaño del botón cuadrado
+                  elevation: 10, // Valor de elevación
+                ),
+                child:const Text(
+                  "Registrar \nPaciente",
+                  textAlign: TextAlign.center, // Alinea el texto al centro dentro del botón
+                  style: TextStyle(
+                    fontSize: 20,
+                    color:  Color(0xFF002333), // Texto en azul oscuro
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                // Acción cuando se presiona "Historias Clínicas"
+                },
+                style: ElevatedButton.styleFrom(
+                  
+                  backgroundColor: const Color(0xFF6EEAB0), // Fondo verde fosforescente
+                  padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 60),// Tamaño del botón cuadrado
+                  elevation: 10, // Valor de elevación
+                ),
+                child: const Text(
+                  "Historias \nClínicas",
+                  textAlign: TextAlign.center, // Alinea el texto al centro dentro del botón
+                  style: TextStyle(
+                    fontSize: 20,
+                    color:  Color(0xFF002333), // Texto en azul oscuro
+                  ),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  // Acción cuando se presiona "Generar Diagnóstico"
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF6EEAB0), // Fondo verde fosforescente
+                  padding: const EdgeInsets.symmetric(vertical: 80, horizontal: 60), // Tamaño del botón cuadrado
+                  elevation: 10, // Valor de elevación
+                ),
+                child:const  Text(
+                  "Generar \nDiagnóstico",
+                  textAlign: TextAlign.center, // Alinea el texto al centro dentro del botón
+                  style: TextStyle(
+                    fontSize: 20,
+                    color:  Color(0xFF002333), // Texto en azul oscuro
+                    ),
+                ),
+              ),
+            ],
+          ),
         ],
-      ),
-      );
+     ),   
+    ); 
   }
 }

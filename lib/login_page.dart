@@ -42,6 +42,7 @@ class LoginPage extends StatelessWidget {
                 const Text(
                   "Predictor de Tumores",
                   style: TextStyle(fontSize: 96, color: Color(0xFF002333)),
+                  textAlign: TextAlign.center,
                 ),
                 Image.asset('assets/logo_tumor.png'), // Imagen a la derecha
               ],
@@ -85,6 +86,7 @@ class LoginPage extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF6EEAB0),
                           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                          elevation: 10,
                         ),
                         child: const Text(
                           "Ingresar",
@@ -104,6 +106,7 @@ class LoginPage extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF6EEAB0),
                           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                          elevation: 10,
                         ),
                         child: const Text(
                           "Registrarse",
