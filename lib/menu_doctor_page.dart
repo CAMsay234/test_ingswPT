@@ -86,28 +86,16 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
               flex: 3,
               child: Container(
                 color: const Color(0xff159A9C), // Color de fondo del lado derecho
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(50),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                        Row(
-                          children: [
-                            const Text(
-                              "ID: ",
-                              style: TextStyle(fontSize: 20, color: Colors.white),
-                            ),
-                            Container(
-                              color: Colors.grey, // Color de fondo gris para el campo "ID"
-                              padding: const EdgeInsets.all(8),
-                              child: const Text(
-                                "123456",
-                                style: TextStyle(fontSize: 20, color: Colors.white),
-                              ),
-                            ),
-                          ],
-                        ),
+
+
+                        const SizedBox(height: 10),
                         Row(
                           
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             const Text(
                               "Nombre: ",
@@ -117,38 +105,47 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
                               color: Colors.grey, // Color de fondo gris para el campo "Nombre"
                               padding: const EdgeInsets.all(8),
                               child: const Text(
-                                "Juan Pérez",
+                                "Andrés aguilar",
+                                style: TextStyle(fontSize: 20, color: Colors.white),
+                              ),
+                            ),
+                            const Text(
+                              "ID: ",
+                              style: TextStyle(fontSize: 20, color: Colors.white),
+                            ),
+                            Container(
+                              color: Colors.grey, // Color de fondo gris para el campo "Nombre"
+                              padding: const EdgeInsets.all(8),
+                              child: const Text(
+                                "001234",
                                 style: TextStyle(fontSize: 20, color: Colors.white),
                               ),
                             ),
                           ],
                         ),
+
+                        
                         Row(
-                          
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             const Text(
                               "Residencia: ",
                               style: TextStyle(fontSize: 20, color: Colors.white),
                             ),
                             Container(
-                              color: Colors.grey, // Color de fondo gris para el campo "Residencia"
+                              color: Colors.grey, // Color de fondo gris para el campo "Cédula"
                               padding: const EdgeInsets.all(8),
-                              child:const  Text(
+                              child: const Text(
                                 "Medellín",
                                 style: TextStyle(fontSize: 20, color: Colors.white),
                               ),
                             ),
-                          ],
-                        ),
-                        Row(
-                          
-                          children: [
                             const Text(
-                              "Especialidad: ",
+                              "Especilidad: ",
                               style: TextStyle(fontSize: 20, color: Colors.white),
                             ),
                             Container(
-                              color: Colors.grey, // Color de fondo gris para el campo "Especialidad"
+                              color: Colors.grey, // Color de fondo gris para el campo "Cédula"
                               padding: const EdgeInsets.all(8),
                               child: const Text(
                                 "Cardiología",
@@ -157,6 +154,7 @@ class _MenuDoctorPageState extends State<MenuDoctorPage> {
                             ),
                           ],
                         ),
+                        
                       ],
                     ),
                   ),
