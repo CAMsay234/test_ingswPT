@@ -9,11 +9,22 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_picker: ^1.0.4
+
+  intl: ^0.17.0
+
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
 
+
+
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/logo_tumor.png
+    - assets/logo_corazon.png
